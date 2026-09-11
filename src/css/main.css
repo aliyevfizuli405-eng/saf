@@ -1,0 +1,68 @@
+@import "../css/root.css";
+@import  "../css/subcss/nav.css";
+
+.herobg{
+    height: 100vh;
+    background-image: url("../../src/assets/images/herobg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.herobg__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center!important;
+    align-items: center;
+    padding: 200px;
+    text-align: center;
+}
+.subtitle{
+    color: var(--subtitle-color);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.title{
+    font-family: "Playfair",serif;
+    font-weight: 700;
+    color: #fff;
+    font-size: 72px;
+}
+
+.para{
+    font-size: 20px;
+    color: #fff;
+    margin-top: 24px;
+    margin-bottom: 50px;
+}
+
+.button1{
+    font-family: "Inter",sans-serif;
+    font-size: 16px;
+    padding: 16px 32px;
+    border-radius: 10px;
+    background-color: var(--button-red);
+    border: 1px solid var(--button-red);
+    color: #fff;
+    font-weight: 500;
+}
+.button1:hover{
+     background-color: #aa1d1d;
+    border: 1px solid #aa1d1d;
+    transition: background-color 0.8s ease-in;
+}
+
+.button2{
+     font-family: "Inter",sans-serif;
+    font-size: 16px;
+    padding: 16px 32px;
+    border-radius: 10px;
+    background-color: #11111170;
+    border: 1px solid #33333370;
+    color: white;
+}
+
+.button2:hover{
+    background-color: #111111b4;
+    border: 1px solid whitesmoke;
+    transition: background-color 0.8s ease-in;
+}
