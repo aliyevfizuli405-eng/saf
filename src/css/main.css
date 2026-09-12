@@ -1,42 +1,55 @@
 @import "../css/root.css";
-@import  "../css/subcss/nav.css";
+@import "../css/subcss/nav.css";
 
-.herobg{
+
+/* Hero Background Parts */
+.herobg {
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-image: url("../../src/assets/images/herobg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
-.herobg__container{
+
+.herobg__container {
     display: flex;
     flex-direction: column;
-    justify-content: center!important;
+    justify-content: center;
     align-items: center;
-    padding: 200px;
     text-align: center;
 }
-.subtitle{
-    color: var(--subtitle-color);
+
+.subtitle {
+    color: var(--subtitle-color) !important;
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 1rem;
 }
-.title{
-    font-family: "Playfair",serif;
+
+.title {
+    font-family: "Playfair", serif;
     font-weight: 700;
     color: #fff;
     font-size: 72px;
 }
 
-.para{
+.para {
     font-size: 20px;
     color: #fff;
     margin-top: 24px;
     margin-bottom: 50px;
 }
 
-.button1{
-    font-family: "Inter",sans-serif;
+.herobg___buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.button1 {
+    font-family: "Inter", sans-serif;
     font-size: 16px;
     padding: 16px 32px;
     border-radius: 10px;
@@ -45,14 +58,15 @@
     color: #fff;
     font-weight: 500;
 }
-.button1:hover{
-     background-color: #aa1d1d;
+
+.button1:hover {
+    background-color: #aa1d1d;
     border: 1px solid #aa1d1d;
     transition: background-color 0.8s ease-in;
 }
 
-.button2{
-     font-family: "Inter",sans-serif;
+.button2 {
+    font-family: "Inter", sans-serif;
     font-size: 16px;
     padding: 16px 32px;
     border-radius: 10px;
@@ -61,8 +75,196 @@
     color: white;
 }
 
-.button2:hover{
+.button2:hover {
     background-color: #111111b4;
     border: 1px solid whitesmoke;
     transition: background-color 0.8s ease-in;
+}
+
+
+/* Story Parts */
+.story {
+    background-color: var(--default-bg);
+    padding: 100px 0px;
+}
+
+.story__container {
+    display: flex;
+    width: 1400px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.story__images {
+    position: relative;
+    width: 468px;
+    height: 336px;
+    margin-right: 400px;
+}
+
+
+.story__main__image {
+    width: 468px;
+    height: 336px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    border-radius: 15px;
+
+}
+
+.story__sub__bg {
+    width: 468px;
+    height: 336px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    background-color: oklab(39.5843% .119886 .0577565/.3);
+    border-radius: 15px;
+
+}
+
+.salam>* {
+    text-align: left;
+}
+
+.specifities {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+
+/* Menu Part */
+.menu {
+    background-color: #0d111b;
+    height: 100vh;
+}
+
+.menu__container {
+    width: 1400px;
+    padding: 112px 0px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.menu__items {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.menu__item {
+    position: relative;
+    width: 280px;
+    border-radius: 25px;
+    background-color: var(--default-bg);
+}
+
+.menu__item__image {
+    width: 100%;
+}
+
+.menu__item__image>img {
+    width: 100%;
+    height: 288px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.menu__item__texts {
+    background-color: var(--default-bg);
+    padding: 24px 24px;
+    text-align: left;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.menu__item__texts * {
+    color: #fff;
+    font-family: "Playfair", sans-serif;
+}
+
+.pick {
+    background-color: rgb(139, 3, 3);
+    color: #fff;
+    padding: 8px 10px;
+    border-radius: 12px;
+    position: absolute;
+    top: 3%;
+    left: 60%;
+}
+
+.view__menu {
+    margin-top: 30px;
+}
+
+.view__menu>a {
+    font-size: 20px;
+}
+
+
+/* Testimonials */
+
+.testimonials {
+    background-color: var(--default-bg);
+    padding: 120px 0px;
+}
+
+.testimonials__container * {
+    text-align: center;
+
+}
+
+.user__comments {
+    display: flex;
+    gap: 1rem;
+    margin-top: 45px;
+
+}
+
+
+.bi-star-fill {
+    color: #ffb900;
+}
+
+
+.testimonial__card {
+    padding: 32px;
+    background-color: #0d111b;
+    border-radius: 10px;
+}
+
+.testimonial__card>* {
+    text-align: left;
+    color:#D1D5DB;
+}
+
+@keyframes ScrollDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.fa-arrow-down {
+    font-size: 40px !important;
+    margin-top: 40px;
+    color: #ffffff;
+    animation: ScrollDown 2s ease-in infinite;
+}
+
+@media screen and (min-width:630px) {
+    .herobg___buttons {
+        flex-direction: row;
+    }
 }

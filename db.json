@@ -1,0 +1,45 @@
+{
+  "foods": [
+    {
+      "title": "Burrata",
+      "desc": "Creamy burrata with prosciutto di Parma, arugula, and aged balsamic",
+      "price": 18,
+      "imageUrl": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=400&h=400&fit=crop"
+    },
+    {
+      "title": "Spaghetti alla Carbonara",
+      "desc": "Classic Roman pasta with guanciale, egg yolk, Pecorino Romano, and black pepper",
+      "price": 24,
+      "imageUrl": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=800&h=600&fit=crop"
+    },
+    {
+      "title": "Branzino al Forno",
+      "desc": "Whole roasted Mediterranean sea bass with herbs, lemon, and olive oil",
+      "price": 38,
+      "imageUrl": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=400&h=400&fit=crop"
+    },
+    {
+      "title": "Tiramisu",
+      "desc": "Classic layered dessert with espresso-soaked ladyfingers and mascarpone cream",
+      "price": 12,
+      "imageUrl": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=400&h=400&fit=crop"
+    }
+  ],
+   "testimonials": [
+    {
+      "username": "Sarah M.",
+      "time": "January 2025",
+      "comment": "The best Italian food I've had outside of Italy. The carbonara is absolutely authentic and the service is impeccable."
+    },
+    {
+      "username": "Michael R.",
+      "time": "December 2024",
+      "comment": "We celebrated our anniversary here and it was perfect. The ambiance, the food, the wine selection - everything exceeded our expectations."
+    },
+    {
+      "username": "Jennifer L.",
+      "time": "November 2024",
+      "comment": "La Tavola has become our go-to spot for special occasions. The burrata appetizer is a must-try, and the tiramisu is heavenly."
+    }
+  ]
+}

@@ -2,7 +2,8 @@
 :root{
     --text-link:#d1d5db;
     --button-red:#dc2626;
-    --subtitle-color:#f87171
+    --subtitle-color:#f87171;
+    --default-bg:#111827;
 
 }
 
@@ -13,4 +14,8 @@
     list-style-type: none;
     text-decoration: none;
     font-family: "Inter",sans-serif;
+}
+
+.d-none{
+    display: none;
 }

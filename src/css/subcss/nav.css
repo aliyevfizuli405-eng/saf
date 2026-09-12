@@ -1,52 +1,132 @@
-nav{
+nav {
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #111;
+    background-color: var(--default-bg);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
 }
 
+
 .container{
-    width: 1300px;
-    margin: 0 auto;
     display: flex;
-    gap: 1rem;
     align-items: center;
     justify-content: space-between;
-    
 }
-.nav__logo{
+.container-sm {
+    width: 100%;
+    margin: 0 auto;
+    padding: 12px 10px;
+    gap: 1rem;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container-sm {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container-sm {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container-sm {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container-sm {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container-sm {
+        max-width: 1320px;
+    }
+}
+
+.nav__logo {
     width: 150px;
     height: 150px;
 }
 
-.nav__center{
-    display: flex;
-    gap: 1.5rem;
+.nav__center {
+    display: none;
 }
 
-.nav__link{
+.nav__right {
+    display: none;
+}
+
+.nav__link {
     color: var(--text-link);
     font-size: 14px;
     font-weight: 500;
 }
-.nav__link:hover{
+
+.nav__link:hover {
     color: var(--subtitle-color);
 }
 
-.nav__right > button{
-    background-color: var(--button-red);
-    padding: 10px 14px;
+
+.nav__mobile__menu>button {
+    padding: 12px 10px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
     color: #fff;
-    border: 1px solid var(--button-red);
-    border-radius: 5px;
 }
-.nav__right > button:hover{
-    background-color: #aa1d1d;
-    border: 1px solid #aa1d1d;
-    transition: background-color 0.8s ease-in;
+
+
+
+@media screen and (min-width:400px) {
+    .container {
+        min-width: 400px;
+    }
+
+}
+
+@media screen and (min-width:996px) {
+    .container {
+        max-width: 1400px;
+        min-width: 1020px;
+    }
+
+    .nav__mobile__menu {
+        display: none;
+    }
+
+    .nav__center {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .nav__right {
+        display: block;
+    }
+
+    .nav__right>button {
+        background-color: var(--button-red);
+        padding: 10px 14px;
+        color: #fff;
+        border: 1px solid var(--button-red);
+        border-radius: 5px;
+    }
+
+    .nav__right>button:hover {
+        background-color: #aa1d1d;
+        border: 1px solid #aa1d1d;
+        transition: background-color 0.8s ease-in;
+    }
 }
