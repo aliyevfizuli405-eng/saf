@@ -61,3 +61,19 @@ async function RenderTestimonials() {
     }
 }
 RenderTestimonials();
+
+const  MenuBtnElement =$("MenuBtn");
+const  MenuListElement =$("MenuList");
+let Menuchecker=false;
+MenuBtnElement.addEventListener("click",()=>{
+    if(!Menuchecker)
+        {
+             MenuListElement.classList.remove("d-none");
+            MenuBtnElement.innerHTML=`<i class = "gg-close"></i>`
+        }
+    else{
+        MenuListElement.classList.add("d-none");
+        MenuBtnElement.innerHTML=`<i class="gg-menu"></i>`;
+    }
+    Menuchecker=!Menuchecker;
+})

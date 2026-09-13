@@ -2,6 +2,8 @@
 @import "../css/subcss/nav.css";
 
 
+
+
 /* Hero Background Parts */
 .herobg {
     height: 100vh;
@@ -205,6 +207,18 @@
     font-size: 20px;
 }
 
+#MenuList{
+    display: flex;
+    flex-direction: column;
+    background-color: #0d111b;
+    position:absolute;
+    left: 0%;
+    top: 100%;
+    border-top: 1px solid black;
+}
+.d-none{
+    display: none!important;
+}
 
 /* Testimonials */
 
@@ -309,6 +323,22 @@ label {
 .gallery-container>* {
     text-align: center;
 }
+.gallery-photos{
+    padding: 0px 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    grid-template-columns: repeat(12,1fr);
+}
+
+.gallery-photos > img{
+   width: 100%;
+   height: auto;
+    grid-column: span 12;
+    object-fit: cover;
+    border-radius: 15px;
+}
 
 .fa-arrow-down {
     font-size: 40px !important;
@@ -333,6 +363,16 @@ label {
 }
 
 
+
+
+    
+@media (min-width: 576px) {
+    .gallery-photos img {
+        width: 443px;
+        height: 443px;
+    }
+}
+
 @media screen and (min-width:630px) {
     .menu__item {
         grid-column: span 6;
@@ -354,9 +394,25 @@ label {
         height: auto;
         object-fit: cover;
     }
+    .gallery-photos > img{
+        width: 296px;
+        height: 296px;
+        grid-column: span 6;
+    }
 }
 
-@media screen and (min-width:992px) {
+
+/* Tablets */
+@media (min-width: 768px) {
+    .gallery-photos img{
+        grid-column: span 6;
+        width: 360px;
+        height: 360px;
+    }
+}
+
+/* Small laptops */
+@media (min-width: 992px) {
     .menu__item {
         grid-column: span 3;
     }
@@ -386,5 +442,26 @@ label {
     }
     .salam{
         grid-column: span 8;
+    }
+    .gallery-photos img{
+        grid-column: span 4;
+        width: 309px;
+        height: 309px;
+    }
+}
+
+
+/* Desktop */
+@media (min-width: 1200px) {
+    
+}
+
+/* Large desktop */
+@media (min-width: 1400px) {
+    .gallery-photos img{
+        grid-column: span 3;
+        width: 292px;
+        height: 292px;
+        object-fit: cover;
     }
 }
