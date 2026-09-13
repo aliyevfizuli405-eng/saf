@@ -89,9 +89,9 @@
 }
 
 .story__container {
-   display: grid;
-   gap: 100px;
-   grid-template-columns: repeat(12,1fr);
+    display: grid;
+    gap: 100px;
+    grid-template-columns: repeat(12, 1fr);
 }
 
 
@@ -103,7 +103,7 @@
 
 
 .story__main__image {
-    width:100%;
+    width: 100%;
     height: auto;
     position: relative;
     top: 0%;
@@ -113,7 +113,7 @@
 }
 
 .story__sub__bg {
-    width:100%;
+    width: 100%;
     height: 65%;
     position: absolute;
     top: 10%;
@@ -123,9 +123,10 @@
 
 }
 
-.salam{
+.salam {
     grid-column: span 7;
 }
+
 .salam>* {
     text-align: left;
 }
@@ -143,15 +144,15 @@
 }
 
 .menu__container {
-    width: 1400px;
     padding: 112px 0px;
     margin: 0 auto;
     text-align: center;
 }
 
 .menu__items {
+    padding: 0px 20px;
     display: grid;
-    grid-template-columns: repeat(12,1fr);
+    grid-template-columns: repeat(12, 1fr);
     justify-content: center;
     gap: 30px;
 }
@@ -215,12 +216,11 @@
 
 .testimonials__container * {
     text-align: center;
-
 }
 
 .user__comments {
     display: grid;
-    grid-template-columns: repeat(12,1fr);
+    grid-template-columns: repeat(12, 1fr);
     gap: 1rem;
     margin-top: 45px;
 }
@@ -231,7 +231,7 @@
 }
 
 
-.testimonial__card{
+.testimonial__card {
     grid-column: span 12;
     padding: 32px;
     background-color: #0d111b;
@@ -253,37 +253,43 @@
 }
 
 .reservation__container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
     align-items: center;
 }
 
 .reservation__texts {
-    width: 50%;
+    grid-column: span 12;
 }
 
 .reservation__form {
-    width: 800px;
+    grid-column: span 12;
+    max-height: 800px;
     padding: 32px;
     display: flex;
-    gap: 10px;
-    justify-content: space-between;
+    gap: 4%;
     flex-wrap: wrap;
     background-color: #1f2937;
     border-radius: 20px;
+}
+
+.reservation__form div {
+    width: 100%;
 }
 
 .form__input {
     margin-top: 4px;
     margin-bottom: 15px;
     padding: 12px 16px;
-    width: 308px;
+    width: 100%;
     border-radius: 10px;
     border: none;
     background-color: #374151;
     color: white;
 }
 
-.reservation__button{
+.reservation__button {
+    margin-top: 30px;
     width: 100%;
     background-color: var(--button-red);
     padding: 16px 0px;
@@ -291,15 +297,17 @@
     color: #fff;
     border-radius: 10px;
 }
-label{
+
+label {
     color: #fff;
 }
 
-.gallery{
+.gallery {
     padding: 110px 0px;
     background-color: #1f2937;
 }
-.gallery-container > *{
+
+.gallery-container>* {
     text-align: center;
 }
 
@@ -327,19 +335,40 @@ label{
 
 
 @media screen and (min-width:630px) {
-    .menu__item{
+    .menu__item {
         grid-column: span 6;
     }
+
     .herobg___buttons {
         flex-direction: row;
     }
+
+    .form__input {
+        width: 100%;
+    }
+
+    .reservation__form div {
+        width: 46%;
+    }
 }
+
 @media screen and (min-width:992px) {
-    .menu__item{
+    .menu__item {
         grid-column: span 3;
     }
-    .menu__items{
+
+    .menu__items {
         justify-content: space-between;
     }
-    
+
+    .reservation__texts {
+        grid-column: span 6;
+    }
+
+    .reservation__form {
+        grid-column: span 6;
+    }
+    .testimonial__card{
+        grid-column: span 4;
+    }
 }
