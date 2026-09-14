@@ -41,5 +41,103 @@
       "time": "November 2024",
       "comment": "La Tavola has become our go-to spot for special occasions. The burrata appetizer is a must-try, and the tiramisu is heavenly."
     }
-  ]
+  ],
+  "Menu":[
+  {
+    "name": "Bruschetta al Pomodoro",
+    "price": "$12",
+    "description": "Grilled bread topped with fresh tomatoes, garlic, basil, and extra virgin olive oil",
+    "category": "Antipasti"
+  },
+  {
+    "name": "Burrata",
+    "price": "$18",
+    "description": "Creamy burrata with prosciutto di Parma, arugula, and aged balsamic",
+    "category": "Antipasti"
+  },
+  {
+    "name": "Calamari Fritti",
+    "price": "$16",
+    "description": "Crispy fried calamari served with marinara sauce and lemon aioli",
+    "category": "Antipasti"
+  },
+  {
+    "name": "Carpaccio di Manzo",
+    "price": "$19",
+    "description": "Thinly sliced raw beef with arugula, capers, and shaved Parmigiano",
+    "category": "Antipasti"
+  },
+  {
+    "name": "Spaghetti alla Carbonara",
+    "price": "$24",
+    "description": "Classic Roman pasta with guanciale, egg yolk, Pecorino Romano, and black pepper",
+    "category": "Primi"
+  },
+  {
+    "name": "Rigatoni alla Norma",
+    "price": "$22",
+    "description": "Rigatoni with roasted eggplant, tomato sauce, ricotta salata, and fresh basil",
+    "category": "Primi"
+  },
+  {
+    "name": "Risotto ai Funghi Porcini",
+    "price": "$26",
+    "description": "Arborio rice slowly cooked with porcini mushrooms, white wine, and Parmigiano",
+    "category": "Primi"
+  },
+  {
+    "name": "Tagliatelle al Ragu",
+    "price": "$25",
+    "description": "Fresh egg pasta with slow-cooked Bolognese meat sauce",
+    "category": "Primi"
+  },
+  {
+    "name": "Branzino al Forno",
+    "price": "$38",
+    "description": "Whole roasted Mediterranean sea bass with herbs, lemon, and olive oil",
+    "category": "Secondi"
+  },
+  {
+    "name": "Osso Buco alla Milanese",
+    "price": "$42",
+    "description": "Braised veal shank with saffron risotto and gremolata",
+    "category": "Secondi"
+  },
+  {
+    "name": "Pollo alla Parmigiana",
+    "price": "$28",
+    "description": "Breaded chicken breast with tomato sauce, mozzarella, and fresh basil",
+    "category": "Secondi"
+  },
+  {
+    "name": "Bistecca alla Fiorentina",
+    "price": "$85",
+    "description": "32oz T-bone steak grilled over oak wood, served with roasted potatoes",
+    "category": "Secondi"
+  },
+  {
+    "name": "Tiramisu",
+    "price": "$12",
+    "description": "Classic layered dessert with espresso-soaked ladyfingers and mascarpone cream",
+    "category": "Dolci"
+  },
+  {
+    "name": "Panna Cotta",
+    "price": "$10",
+    "description": "Vanilla bean panna cotta with seasonal berry compote",
+    "category": "Dolci"
+  },
+  {
+    "name": "Cannoli Siciliani",
+    "price": "$11",
+    "description": "Crispy pastry shells filled with sweet ricotta, chocolate chips, and pistachios",
+    "category": "Dolci"
+  },
+  {
+    "name": "Affogato",
+    "price": "$9",
+    "description": "Vanilla gelato drowned in hot espresso with amaretto",
+    "category": "Dolci"
+  }
+]
 }

@@ -27,6 +27,20 @@ nav {
     margin-left: auto;
 }
 
+
+#MenuList {
+    display: flex;
+    flex-direction: column;
+    background-color: #0d111b;
+    position: absolute;
+    left: 9%;
+    top: 100%;
+    border-top: 1px solid black;
+}
+
+.d-none {
+    display: none !important;
+}
 @media (min-width: 576px) {
     .container-sm {
         max-width: 540px;

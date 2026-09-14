@@ -343,19 +343,7 @@ label {
     animation: ScrollDown 2s ease-in infinite;
 }
 
-#MenuList {
-    display: flex;
-    flex-direction: column;
-    background-color: #0d111b;
-    position: absolute;
-    left: 9%;
-    top: 100%;
-    border-top: 1px solid black;
-}
 
-.d-none {
-    display: none !important;
-}
 
 
 

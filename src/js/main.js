@@ -2,17 +2,28 @@ const $ = (id) => document.getElementById(id);
 
 let menuItemsElement = $("menu__items");
 let user__commentsElement = $("user__comments");
+let MenuBtnElement = $("MenuBtn");
+let MenuListElement = $("MenuList");
+let Menuchecker = false;
+let AntiPastiElemenet = $("AntiPasti");
+let PrimiElement=$("Primi");
+let SecondiElement=$("Secondi");
+let DolciElement=$("Dolci");
+
+
+
+
+
+
 
 async function GetItems() {
     const res = await fetch("http://localhost:3000/foods");
     const data = await res.json();
-
     return data;
 }
 
 async function RenderMenuItems() {
     const data = await GetItems();
-
     for (let i = 0; i < data.length; ++i) {
         menuItemsElement.innerHTML += `
         <div class="menu__item">
@@ -62,18 +73,44 @@ async function RenderTestimonials() {
 }
 RenderTestimonials();
 
-const  MenuBtnElement =$("MenuBtn");
-const  MenuListElement =$("MenuList");
-let Menuchecker=false;
-MenuBtnElement.addEventListener("click",()=>{
-    if(!Menuchecker)
-        {
-             MenuListElement.classList.remove("d-none");
-            MenuBtnElement.innerHTML=`<i class = "gg-close"></i>`
-        }
-    else{
-        MenuListElement.classList.add("d-none");
-        MenuBtnElement.innerHTML=`<i class="gg-menu"></i>`;
+
+MenuBtnElement.addEventListener("click", () => {
+    if (!Menuchecker) {
+        MenuListElement.classList.remove("d-none");
+        MenuBtnElement.innerHTML = `<i class = "gg-close"></i>`
     }
-    Menuchecker=!Menuchecker;
+    else {
+        MenuListElement.classList.add("d-none");
+        MenuBtnElement.innerHTML = `<i class="gg-menu"></i>`;
+    }
+    Menuchecker = !Menuchecker;
 })
+
+async function GetAntiPasti() {
+    const res = await fetch("http://localhost:3000/Menu");
+    const AntiPasti = res.json();
+    return AntiPasti;
+}
+
+async function RenderAntiPasti(category,element) {
+    const AntiPasti = await GetAntiPasti();
+
+    for (let i = 0; i < AntiPasti.length; ++i) {
+        if (AntiPasti[i].category == category) {
+            element.innerHTML += `
+         <div class="foodCard">
+                        <span class="foodCardSeperator">
+                            <h3 class="foodCardTitle">${AntiPasti[i].name}</h3>
+                            <span class="foodCardPrice">${AntiPasti[i].price}</span>
+                        </span>
+                        <p class="foodCardDesc">${AntiPasti[i].description}</p>
+                    </div>
+        `
+        }
+    }
+}
+
+RenderAntiPasti("Antipasti",AntiPastiElemenet);
+RenderAntiPasti("Primi",PrimiElement);
+RenderAntiPasti("Secondi",SecondiElement);
+RenderAntiPasti("Dolci",DolciElement);

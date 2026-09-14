@@ -1,4 +1,6 @@
-
+.footer{
+    padding: 96px 0px;
+}
 .footer__container{
     display: flex;
     flex-direction: column;
@@ -69,9 +71,9 @@
 @media (min-width: 992px) {
     .footer__container{
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
         gap: 1rem;
-        align-items: center;
+        
     }
     
 }
