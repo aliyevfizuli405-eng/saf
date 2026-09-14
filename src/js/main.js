@@ -9,6 +9,10 @@ let AntiPastiElemenet = $("AntiPasti");
 let PrimiElement=$("Primi");
 let SecondiElement=$("Secondi");
 let DolciElement=$("Dolci");
+let employeerElemenet=$("employeer");
+
+
+
 
 
 
@@ -114,3 +118,27 @@ RenderAntiPasti("Antipasti",AntiPastiElemenet);
 RenderAntiPasti("Primi",PrimiElement);
 RenderAntiPasti("Secondi",SecondiElement);
 RenderAntiPasti("Dolci",DolciElement);
+
+async function GetEmplooyers(){
+    const res = await fetch("http://localhost:3000/employeers");
+    const employeer= await res.json();
+    return employeer
+}
+
+async function RenderEmplooyers(){
+    const employeer= await GetEmplooyers();
+
+    for(let i=0;i<employeer.length;++i){
+        employeerElemenet.innerHTML+=`
+         <div class="employeer__card">
+                        <img src="${employeer[i].imageUrl}" style="width:100%;border-top-left-radius:20px;border-top-right-radius:20px;" alt="">
+                        <div class="employeer__info">
+                            <h3 class=foodCardTitle>${employeer[i].name}</h3>
+                            <h6 class="subtitle">${employeer[i].position}</h6>
+                            <p class="foodCardDesc">${employeer[i].desc}</p>
+                        </div>
+                    </div>
+        `
+    }
+}
+RenderEmplooyers();
