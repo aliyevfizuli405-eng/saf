@@ -10,24 +10,20 @@ let PrimiElement=$("Primi");
 let SecondiElement=$("Secondi");
 let DolciElement=$("Dolci");
 let employeerElemenet=$("employeer");
+let galleryPhotosElement=$("galleryPhotos");
+let allBtnElement=$("all");
+let interiorElement=$("interior");
+let foodElement=$("food");
+let drinksELement=$("drinks");
 
-
-
-
-
-
-
-
-
-
-async function GetItems() {
-    const res = await fetch("http://localhost:3000/foods");
+async function GetItems(link) {
+    const res = await fetch(link);
     const data = await res.json();
     return data;
 }
 
-async function RenderMenuItems() {
-    const data = await GetItems();
+async function RenderMenuItems(link) {
+    const data = await GetItems(link);
     for (let i = 0; i < data.length; ++i) {
         menuItemsElement.innerHTML += `
         <div class="menu__item">
@@ -47,16 +43,10 @@ async function RenderMenuItems() {
     }
 }
 
-RenderMenuItems();
+RenderMenuItems("http://localhost:3000/foods");
 
-async function GetTestimonials() {
-    const res = await fetch("http://localhost:3000/testimonials")
-    const comments = await res.json();
-    return comments;
-}
-
-async function RenderTestimonials() {
-    const comments = await GetTestimonials();
+async function RenderTestimonials(link) {
+    const comments = await GetItems(link);
     for (let i = 0; i < comments.length; ++i) {
         user__commentsElement.innerHTML +=
             `
@@ -75,8 +65,7 @@ async function RenderTestimonials() {
         `
     }
 }
-RenderTestimonials();
-
+RenderTestimonials("http://localhost:3000/testimonials");
 
 MenuBtnElement.addEventListener("click", () => {
     if (!Menuchecker) {
@@ -90,14 +79,8 @@ MenuBtnElement.addEventListener("click", () => {
     Menuchecker = !Menuchecker;
 })
 
-async function GetAntiPasti() {
-    const res = await fetch("http://localhost:3000/Menu");
-    const AntiPasti = res.json();
-    return AntiPasti;
-}
-
-async function RenderAntiPasti(category,element) {
-    const AntiPasti = await GetAntiPasti();
+async function RenderAntiPasti(link,category,element) {
+    const AntiPasti = await GetItems(link);
 
     for (let i = 0; i < AntiPasti.length; ++i) {
         if (AntiPasti[i].category == category) {
@@ -114,19 +97,13 @@ async function RenderAntiPasti(category,element) {
     }
 }
 
-RenderAntiPasti("Antipasti",AntiPastiElemenet);
-RenderAntiPasti("Primi",PrimiElement);
-RenderAntiPasti("Secondi",SecondiElement);
-RenderAntiPasti("Dolci",DolciElement);
+RenderAntiPasti("http://localhost:3000/Menu","Antipasti",AntiPastiElemenet);
+RenderAntiPasti("http://localhost:3000/Menu","Primi",PrimiElement);
+RenderAntiPasti("http://localhost:3000/Menu","Secondi",SecondiElement);
+RenderAntiPasti("http://localhost:3000/Menu","Dolci",DolciElement);
 
-async function GetEmplooyers(){
-    const res = await fetch("http://localhost:3000/employeers");
-    const employeer= await res.json();
-    return employeer
-}
-
-async function RenderEmplooyers(){
-    const employeer= await GetEmplooyers();
+async function RenderEmplooyers(link){
+    const employeer= await GetItems(link);
 
     for(let i=0;i<employeer.length;++i){
         employeerElemenet.innerHTML+=`
@@ -141,4 +118,28 @@ async function RenderEmplooyers(){
         `
     }
 }
-RenderEmplooyers();
+
+RenderEmplooyers("http://localhost:3000/employeers");
+
+async function RenderGalleryPhotos(link,category){
+    galleryPhotosElement.innerHTML=``; 
+    let photos = await GetItems(link);
+    const temp=photos.filter(photo=>photo.category.includes(category))
+    for(let i =0;i<temp.length;++i){
+        galleryPhotosElement.innerHTML+=`<img class="galleryPhoto" src="${temp[i].imageUrl}">`
+    }
+}
+
+
+allBtnElement.addEventListener("click",()=>{
+    RenderGalleryPhotos("http://localhost:3000/gallery","All");
+});
+interiorElement.addEventListener("click",()=>{
+    RenderGalleryPhotos("http://localhost:3000/gallery","Interior");
+});
+foodElement.addEventListener("click",()=>{
+    RenderGalleryPhotos("http://localhost:3000/gallery","Food");
+});
+drinksELement.addEventListener("click",()=>{
+    RenderGalleryPhotos("http://localhost:3000/gallery","Drinks");
+})
