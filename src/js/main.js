@@ -130,6 +130,7 @@ async function RenderGalleryPhotos(link,category){
     }
 }
 
+RenderGalleryPhotos("http://localhost:3000/gallery","All");
 
 allBtnElement.addEventListener("click",()=>{
     RenderGalleryPhotos("http://localhost:3000/gallery","All");

@@ -1,0 +1,55 @@
+@import "/src/css/main.css";
+@import "/src/css/root.css";
+@import "/src/css/subcss/footer.css";
+@import "/src/css/subcss/nav.css";
+
+
+.Gallery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--default-bg);
+    padding: 112px 0px;
+}
+.galleryContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.galleryPhotos{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 2rem;
+}
+.galleryPhoto{
+    grid-column: span 3;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+.galleryButtonBox button{
+    color: #d1d5db;
+    padding: 8px 20px;
+    background-color: #1f2937;
+    border-radius: 15px;
+    border: none;
+}
+
+.insta{
+    background-color: #1f2937;
+    padding: 64px 0px;
+}
+.insta__container{
+    text-align: center;
+}
+.instaButton{
+    font-size: 16px;
+    background: linear-gradient(115deg, #f9ce34, #ee2a7b, #6228d7);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    margin-top: 24px;
+    padding: 10px 32px;
+}

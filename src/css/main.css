@@ -95,21 +95,18 @@
 
 .story__container {
     display: grid;
+    gap: 3rem;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
     grid-template-columns: repeat(12, 1fr);
 }
 
 
-.story__images {
-    grid-column: span 12;
-    width: 100%;
-}
 
 
 .story__main__image {
     width: 100%;
-    height: auto;
+    grid-column: span 12;
     object-fit: cover;
     border-radius: 15px;
 }
@@ -391,11 +388,7 @@ label {
         width: 46%;
     }
 
-    .story__main__image {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
+    
 
     .gallery-photos>img {
         width: 296px;
@@ -435,27 +428,16 @@ label {
     .testimonial__card {
         grid-column: span 4;
     }
-
-    .story__container {
-        gap: 4rem;
-    }
-
-    .story__images {
-        grid-column: span 4;
-    }
-
-    .story__main__image {
-        width: 100%;
-    }
-
-    .salam {
-        grid-column: span 8;
-    }
-
     .gallery-photos img {
         grid-column: span 4;
         width: 309px;
         height: 309px;
+    }
+    .story__main__image{
+        grid-column: span 6;
+    }
+    .salam{
+        grid-column: span 6;
     }
 }
 

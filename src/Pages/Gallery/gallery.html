@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./menu.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="./gallery.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AliAghayev132/iconsall/src/css/icons/all.css">
-    <title>Menu | La Tavola</title>
 </head>
 
 <body>
+
     <header class="head">
         <nav>
             <div class="container container-sm">
@@ -50,40 +51,32 @@
                     passion for authentic Italian flavors.</p>
             </div>
         </section>
-        <section class="Items">
-            <div class="container-sm" style="padding: 48px 0px;">
-                <h3 class="foodCardTitle" style="font-size: 30px!important;">Anti Pasti</h3>
-                <p class="foodCardDesc">Traditional Italian starters</p>
-                <div class="antipasti__container" id="AntiPasti">
-
+        <section class="Gallery">
+            <div class="galleryContainer container-sm">
+                <h3 class="title">Browse Our Gallery</h3>
+                <p class="foodCardDesc">Click on any image to view it larger</p>
+                <span class="galleryButtonBox">
+                    <button id="all">All</button>
+                    <button id="interior">Interior</button>
+                    <button id="food">Food</button>
+                    <button id="drinks">Drinks</button>
+                </span>
+                <div class="gallery-photos" id="galleryPhotos">
                 </div>
-                <br>
-                <br>
-                <br>
-                <hr>
-                <h3 class="foodCardTitle">Primi</h3>
-                <p class="foodCardDesc">Fresh pasta and risotto</p>
-                <div class="antipasti__container" id="Primi">
-
-                </div>
-                <br>
-                <br>
-                <br>
-                <hr>
-                <h3 class="foodCardTitle">Secondi</h3>
-                <p class="foodCardDesc">Main courses</p>
-                <div class="antipasti__container" id="Secondi">
-
-                </div>
-                <br>
-                <br>
-                <br>
-                <hr>
-                <h3 class="foodCardTitle">Dolci</h3>
-                <p class="foodCardDesc">House-made desserts</p>
-                <div class="antipasti__container" id="Dolci">
-
-                </div>
+            </div>
+        </section>
+        <section class="insta">
+            <div class="container-sm insta__container">
+                <h2 class="subtitle" style="font-size: 24px !important;font-family: 'Playfair',sans-serif"><i
+                        class="bi bi-instagram btn__icon"
+                        style="font-size: 32px;margin-right: 5px;"></i>@latavolarestaurant</h2>
+                <p class="foodCardDesc">Follow us on Instagram for daily specials, behind-the-scenes content, and more
+                    delicious inspiration.</p>
+                <button class="instaButton">
+                    <div style="display: flex;justify-content: center;align-items: center;"><i
+                            class="bi bi-instagram btn__icon" style="font-size: 32px;margin-right: 5px;"></i>Follow On
+                        Instagram</div>
+                </button>
             </div>
         </section>
     </main>

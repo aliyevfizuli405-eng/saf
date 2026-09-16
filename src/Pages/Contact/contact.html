@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./menu.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AliAghayev132/iconsall/src/css/icons/all.css">
-    <title>Menu | La Tavola</title>
+    <title>Contact</title>
+    <link rel="stylesheet" href="./contact.css">
 </head>
 
 <body>
@@ -42,7 +41,7 @@
         </nav>
     </header>
     <main>
-        <section class="OurMenu">
+        <section class="OurMenu" style="background-color: #374151;">
             <div class="container-sm OurMenu__container">
                 <h6 class="subtitle">OUR MENU</h6>
                 <h1 class="title">Authentic Italian Cuisine</h1>
@@ -50,40 +49,57 @@
                     passion for authentic Italian flavors.</p>
             </div>
         </section>
-        <section class="Items">
-            <div class="container-sm" style="padding: 48px 0px;">
-                <h3 class="foodCardTitle" style="font-size: 30px!important;">Anti Pasti</h3>
-                <p class="foodCardDesc">Traditional Italian starters</p>
-                <div class="antipasti__container" id="AntiPasti">
-
+        <section class="reservation">
+            <div class="reservation__container container-sm">
+                <div class="reservation__texts">
+                    <h5 class="subtitle">BOOK A TABLE</h5>
+                    <h3 class="title">Make a Reservation</h3>
+                    <p class="para">Join us for an unforgettable dining experience. Reserve your table today and let us
+                        take care of the rest.</p>
+                    <span class="subtitle">Or call us directly <br>(555) 123-4567</span>
                 </div>
-                <br>
-                <br>
-                <br>
-                <hr>
-                <h3 class="foodCardTitle">Primi</h3>
-                <p class="foodCardDesc">Fresh pasta and risotto</p>
-                <div class="antipasti__container" id="Primi">
 
-                </div>
-                <br>
-                <br>
-                <br>
-                <hr>
-                <h3 class="foodCardTitle">Secondi</h3>
-                <p class="foodCardDesc">Main courses</p>
-                <div class="antipasti__container" id="Secondi">
-
-                </div>
-                <br>
-                <br>
-                <br>
-                <hr>
-                <h3 class="foodCardTitle">Dolci</h3>
-                <p class="foodCardDesc">House-made desserts</p>
-                <div class="antipasti__container" id="Dolci">
-
-                </div>
+                <form action="" class="reservation__form">
+                    <div>
+                        <label>Your name</label>
+                        <br>
+                        <input type="text" placeholder="Your name" class="form__input">
+                    </div>
+                    <div>
+                        <label>Email</label>
+                        <br>
+                        <input type="text" placeholder="your@email.com" class="form__input">
+                    </div>
+                    <div>
+                        <label>Date</label>
+                        <br>
+                        <input type="date" class="form__input">
+                    </div>
+                    <div>
+                        <label>Time</label>
+                        <br>
+                        <input type="time" placeholder="Select Time" class="form__input">
+                    </div>
+                    <div>
+                        <label>Guests</label>
+                        <br>
+                        <input type="text" class="form__input" placeholder="Select Guests">
+                    </div>
+                    <div>
+                        <label>Phone</label>
+                        <br>
+                        <input type="number" placeholder="(555)-666-FI" class="form__input">
+                    </div>
+                    <div style="width: 100%;">
+                        <label>Special Requests</label>
+                        <br>
+                        <input type="text"
+                            style="width: 100%; background-color: #374151; border: none; padding: 12px 16px; border-radius: 10px; height: 98px;">
+                    </div>
+                    <button class="reservation__button">Request Reservation</button>
+                    <p style="color: #374151;text-align: right;">We'll confirm your reservation via email within 2
+                        hours.</p>
+                </form>
             </div>
         </section>
     </main>
@@ -148,7 +164,6 @@
         </div>
 
     </footer>
-    <script src="/src/js/main.js"></script>
 </body>
 
 </html>
