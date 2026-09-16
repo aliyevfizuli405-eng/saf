@@ -86,6 +86,9 @@
 .experience{
     background-color: #dc2626;
     padding: 122px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .experience__container{
     text-align: center;

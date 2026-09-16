@@ -95,18 +95,15 @@
 
 .story__container {
     display: grid;
-    gap: 3rem;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
     grid-template-columns: repeat(12, 1fr);
 }
 
 
-
-
 .story__main__image {
-    width: 100%;
     grid-column: span 12;
+    width: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 15px;
 }
@@ -129,7 +126,7 @@
 }
 
 .salam>* {
-    text-align: left;
+    text-align: center;
 }
 
 .specifities {
