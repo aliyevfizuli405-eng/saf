@@ -4,44 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./gallery.css">
+    <link rel="stylesheet" href="../src/css/menu.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AliAghayev132/iconsall/src/css/icons/all.css">
+    <title>Menu | La Tavola</title>
 </head>
 
 <body>
-
-    <header class="head">
+   <header class="head">
         <nav>
-            <div class="container container-sm">
-                <div class="nav__left">
-                    <img class="nav__logo" src="https://flavor-colorlib.pages.dev/assets/img/logo-light.svg">
-                </div>
-                <div class="nav__center">
-                    <a href="/index.html" class="nav__link">Home</a>
-                    <a href="/src/Pages/Menu/index.html" class="nav__link">Menu </a>
-                    <a href="/src/Pages/About/about.html" class="nav__link">About</a>
-                    <a href="/src/Pages/Gallery/gallery.html" class="nav__link">Gallery</a>
-                    <a href="/src/Pages/Contact/contact.html" class="nav__link">Contact</a>
-
-                </div>
-                <div class="nav__right">
-                    <button>Reserve a Table</button>
-                </div>
-                <div class="nav__mobile__menu">
-                    <button class="nav__mobile__menu__button" id="MenuBtn"><i class="gg-menu"></i></button>
-                    <div class="container-sm d-none" id="MenuList">
+            <div class="navbar">
+                <div class="container container-sm">
+                    <div class="nav__left">
+                        <img class="nav__logo" src="/src/assets/images/Steam.webp">
+                    </div>
+                    <div class="nav__center">
                         <a href="/index.html" class="nav__link">Home</a>
-                        <a href="/src/Pages/Menu/index.html" class="nav__link">Menu </a>
-                        <a href="/src/Pages/About/about.html" class="nav__link">About</a>
-                        <a href="/src/Pages/Gallery/gallery.html" class="nav__link">Gallery</a>
-                        <a href="/src/Pages/Contact/contact.html" class="nav__link">Contact</a>
-                        <button class="reservation__button">Request Reservation</button>
+                        <a href="/menu/index.html" class="nav__link">Menu </a>
+                        <a href="/about/about.html" class="nav__link">About</a>
+                        <a href="/gallery/gallery.html" class="nav__link">Gallery</a>
+                        <a href="/contact/contact.html" class="nav__link">Contact</a>
+                    </div>
+                    <div class="nav__right">
+                        <button>Reserve a Table</button>
+                    </div>
+                    <div class="nav__mobile__menu">
+                        <button class="nav__mobile__menu__button" id="MenuBtn"><i class="gg-menu"></i></button>
+                        <div class="container-sm d-none" id="MenuList">
+                            <a href="/index.html" class="nav__link">Home</a>
+                            <a href="/menu/index.html" class="nav__link">Menu </a>
+                            <a href="/about/about.html" class="nav__link">About</a>
+                            <a href="/gallery/gallery.html" class="nav__link">Gallery</a>
+                            <a href="/contact/contact.html" class="nav__link">Contact</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
+
     <main>
         <section class="OurMenu">
             <div class="container-sm OurMenu__container">
@@ -51,32 +51,40 @@
                     passion for authentic Italian flavors.</p>
             </div>
         </section>
-        <section class="Gallery">
-            <div class="galleryContainer container-sm">
-                <h3 class="title">Browse Our Gallery</h3>
-                <p class="foodCardDesc">Click on any image to view it larger</p>
-                <span class="galleryButtonBox">
-                    <button id="all">All</button>
-                    <button id="interior">Interior</button>
-                    <button id="food">Food</button>
-                    <button id="drinks">Drinks</button>
-                </span>
-                <div class="gallery-photos" id="galleryPhotos">
+        <section class="Items">
+            <div class="container-sm" style="padding: 48px 0px;">
+                <h3 class="foodCardTitle" style="font-size: 30px!important;">Anti Pasti</h3>
+                <p class="foodCardDesc">Traditional Italian starters</p>
+                <div class="antipasti__container" id="AntiPasti">
+
                 </div>
-            </div>
-        </section>
-        <section class="insta">
-            <div class="container-sm insta__container">
-                <h2 class="subtitle" style="font-size: 24px !important;font-family: 'Playfair',sans-serif"><i
-                        class="bi bi-instagram btn__icon"
-                        style="font-size: 32px;margin-right: 5px;"></i>@latavolarestaurant</h2>
-                <p class="foodCardDesc">Follow us on Instagram for daily specials, behind-the-scenes content, and more
-                    delicious inspiration.</p>
-                <button class="instaButton">
-                    <div style="display: flex;justify-content: center;align-items: center;"><i
-                            class="bi bi-instagram btn__icon" style="font-size: 32px;margin-right: 5px;"></i>Follow On
-                        Instagram</div>
-                </button>
+                <br>
+                <br>
+                <br>
+                <hr>
+                <h3 class="foodCardTitle">Primi</h3>
+                <p class="foodCardDesc">Fresh pasta and risotto</p>
+                <div class="antipasti__container" id="Primi">
+
+                </div>
+                <br>
+                <br>
+                <br>
+                <hr>
+                <h3 class="foodCardTitle">Secondi</h3>
+                <p class="foodCardDesc">Main courses</p>
+                <div class="antipasti__container" id="Secondi">
+
+                </div>
+                <br>
+                <br>
+                <br>
+                <hr>
+                <h3 class="foodCardTitle">Dolci</h3>
+                <p class="foodCardDesc">House-made desserts</p>
+                <div class="antipasti__container" id="Dolci">
+
+                </div>
             </div>
         </section>
     </main>

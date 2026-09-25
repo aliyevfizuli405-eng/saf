@@ -1,9 +1,4 @@
-@import "../css/root.css";
-@import "../css/subcss/nav.css";
-@import "../css/subcss/footer.css";
-@import "../Pages/About/about.css";
-@import "../Pages/Menu/menu.css";
-
+@import url("./root.css");
 
 
 
@@ -11,11 +6,21 @@
 .herobg {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image: url("../../src/assets/images/herobg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+}
+.herobgBlackOverlay{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.348);
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .herobg__container {
@@ -24,11 +29,12 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
 }
 
 .subtitle {
     color: var(--subtitle-color) !important;
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 500;
     margin-bottom: 1rem;
 }
@@ -37,7 +43,7 @@
     font-family: "Playfair", serif;
     font-weight: 700;
     color: #fff;
-    font-size: 72px;
+    font-size: 4.5rem;
 }
 
 .para {
@@ -86,7 +92,13 @@
     transition: background-color 0.8s ease-in;
 }
 
-
+.fa-arrow-down {
+    position:sticky;
+    font-size: 40px !important;
+    margin-top: 40px;
+    color: #ffffff;
+    animation: ScrollDown 2s ease-in infinite;
+}
 /* Story Parts */
 .story {
     background-color: var(--default-bg);
@@ -94,8 +106,10 @@
 }
 
 .story__container {
+    max-width: 1400px;
+    margin: 0 auto;
     display: grid;
-    justify-content: center;
+    justify-content: space-between;
     grid-template-columns: repeat(12, 1fr);
 }
 
@@ -156,19 +170,22 @@
 }
 
 .menu__item {
-    grid-column: span 12;
     position: relative;
+    grid-column: span 12;
+    left: 0;
     border-radius: 25px;
     background-color: var(--default-bg);
 }
 
 .menu__item__image {
     width: 100%;
+    height: 60%;
 }
 
 .menu__item__image>img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
 }
@@ -332,12 +349,7 @@ label {
     background-color: #0d111b;
 }
 
-.fa-arrow-down {
-    font-size: 40px !important;
-    margin-top: 40px;
-    color: #ffffff;
-    animation: ScrollDown 2s ease-in infinite;
-}
+
 
 
 
@@ -349,7 +361,7 @@ label {
     }
 
     50% {
-        transform: translateY(-10px);
+        transform: translateY(10px);
     }
 
     100% {

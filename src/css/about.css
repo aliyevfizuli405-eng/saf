@@ -1,7 +1,4 @@
-@import "/src/css/root.css";
-@import "/src/css/subcss/nav.css";
-@import "/src/css/subcss/footer.css";
-@import "/src/css/main.css";
+@import url("./root.css");
 
 .aboutHero{
     height: 100vh;

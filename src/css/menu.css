@@ -1,7 +1,4 @@
-@import "../../css/root.css";
-@import "../../css/subcss/nav.css";
-@import "../../css/main.css";
-@import "../../css/subcss/footer.css";
+@import url("./root.css");
 
 hr{
     margin-bottom: 20px;

@@ -1,21 +1,29 @@
-nav {
-    height: 80px;
+@keyframes MobileMenu {}
+
+
+
+
+
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: var(--default-bg);
+    height: 80px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 1;
 }
 
-
-.container{
+.container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .container-sm {
     width: 100%;
     margin: 0 auto;
@@ -29,18 +37,21 @@ nav {
 
 
 #MenuList {
+    max-width: 800px;
     display: flex;
     flex-direction: column;
     background-color: #0d111b;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     position: absolute;
-    left: 9%;
     top: 100%;
+    left: 30%;
     border-top: 1px solid black;
 }
 
 .d-none {
     display: none !important;
 }
+
 @media (min-width: 576px) {
     .container-sm {
         max-width: 540px;
@@ -72,8 +83,8 @@ nav {
 }
 
 .nav__logo {
-    width: 150px;
-    height: 150px;
+    width: 48px;
+    height: 48px;
 }
 
 .nav__center {
@@ -95,8 +106,11 @@ nav {
 }
 
 
+
+
+
 .nav__mobile__menu>button {
-    padding: 12px 10px;
+    padding: 20px 10px;
     background-color: rgba(255, 255, 255, 0);
     border: none;
     color: #fff;

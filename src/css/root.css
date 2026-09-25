@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+@import url("./components/nav.css");
+@import url("./components/footer.css");
+@import url("./main.css");
+@import url("./about.css");
+@import url("./contact.css");
+@import url("./gallery.css");
+@import url("./menu.css");
+
 :root{
     --text-link:#d1d5db;
     --button-red:#dc2626;
