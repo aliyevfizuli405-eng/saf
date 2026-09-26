@@ -5,7 +5,7 @@ const menuItemsElement = $("menu__items");
 const userCommentsElement = $("user__comments");
 const menuBtnElement = $("MenuBtn");
 const menuListElement = $("MenuList");
-let menuChecker = false;
+let   menuChecker = false;
 const antiPastiElemenet = $("AntiPasti");
 const primiElement = $("Primi");
 const secondiElement = $("Secondi");
@@ -31,6 +31,7 @@ async function GetItems(link) {
     const data = await res.json();
     return data;
 }
+
 
 async function RenderAntiPasti(link, category, element) {
     const AntiPasti = await GetItems(link);
@@ -121,11 +122,11 @@ async function RenderTestimonials(link) {
 
 menuBtnElement.addEventListener("click", () => {
     if (!menuChecker) {
-        menuListElement.classList.remove("d-none");
+        menuListElement.classList.toggle("open");
         menuBtnElement.innerHTML = `<i class = "gg-close"></i>`
     }
     else {
-        menuListElement.classList.add("d-none");
+        menuListElement.classList.toggle("open");
         menuBtnElement.innerHTML = `<i class="gg-menu"></i>`;
     }
     menuChecker = !menuChecker;
@@ -147,8 +148,6 @@ RenderGalleryPhotos("http://localhost:3000/gallery", "All");
 allBtnElement.addEventListener("click", () => {
     RenderGalleryPhotos("http://localhost:3000/gallery", "All");
 });
-
-
 interiorElement.addEventListener("click", () => {
     RenderGalleryPhotos("http://localhost:3000/gallery", "Interior");
 });
@@ -158,5 +157,4 @@ foodElement.addEventListener("click", () => {
 drinksELement.addEventListener("click", () => {
     RenderGalleryPhotos("http://localhost:3000/gallery", "Drinks");
 })
-
 
