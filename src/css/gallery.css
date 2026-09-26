@@ -25,6 +25,11 @@
     object-fit: cover;
     border-radius: 25px;
 }
+.galleryPhoto:hover { transform: scale(1.04); }
+.galleryButtonBox{
+    display: flex;
+    gap: 1rem;
+}
 .galleryButtonBox button{
     color: #d1d5db;
     padding: 8px 20px;

@@ -1,5 +1,10 @@
 @import url("./root.css");
 
+button:active {
+     transform: scale(1.1);
+     transition: transform 0.5 ease;
+     background-color: #ffb900!important;
+}
 
 
 /* Hero Background Parts */
@@ -43,7 +48,7 @@
     font-family: "Playfair", serif;
     font-weight: 700;
     color: #fff;
-    font-size: 4.5rem;
+    font-size: 2.5rem;
 }
 
 .para {
@@ -397,8 +402,6 @@ label {
         width: 46%;
     }
 
-    
-
     .gallery-photos>img {
         width: 296px;
         height: 296px;
@@ -414,12 +417,18 @@ label {
         width: 360px;
         height: 360px;
     }
+    .title{
+        font-size: 3rem;
+    }
 }
 
 /* Small laptops */
 @media (min-width: 992px) {
     .menu__item {
         grid-column: span 3;
+    }
+    .title{
+        font-size: 3.5rem;
     }
 
     .menu__items {
@@ -452,7 +461,11 @@ label {
 
 
 /* Desktop */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+    .title{
+        font-size: 4rem;
+    }
+}
 
 /* Large desktop */
 @media (min-width: 1400px) {
@@ -461,5 +474,8 @@ label {
         width: 292px;
         height: 292px;
         object-fit: cover;
+    }
+    .title{
+        font-size: 4.5rem;
     }
 }
